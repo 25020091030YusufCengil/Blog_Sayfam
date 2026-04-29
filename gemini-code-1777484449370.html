@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="tr" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yusuf Cengil | Yazılım Mühendisliği Portfolyosu</title>
+    <style>
+        :root {
+            --bg-black: #000000;
+            --card-gray: #0a0a0a;
+            --text-pure: #ffffff;
+            --text-dim: #b0b0b0;
+            --text-muted: #707070;
+            --accent: #d4d4d8;
+            --border: #1f1f1f;
+            --font-serif: 'Georgia', 'Times New Roman', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-pure);
+            font-family: var(--font-serif);
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+        }
+
+        /* --- Navigasyon --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 10%;
+            background: rgba(0, 0, 0, 0.98);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-pure);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li { margin-left: 35px; }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover { color: var(--text-pure); }
+
+        /* --- Hero --- */
+        header {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 15%;
+            border-bottom: 1px solid var(--border);
+        }
+
+        header h1 {
+            font-size: 5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            color: var(--text-dim);
+            font-style: italic;
+            max-width: 800px;
+        }
+
+        /* --- Bölüm Standartları --- */
+        section {
+            padding: 120px 15%;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 3.5rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            text-align: center;
+        }
+
+        /* --- Detaylı Hakkımda --- */
+        .content-block {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            color: var(--text-dim);
+        }
+
+        .content-block p { margin-bottom: 1.5rem; }
+        .highlight { color: var(--text-pure); font-weight: bold; }
+
+        /* --- Projeler (Genişletilmiş) --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+        }
+
+        .project-item {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .project-meta-info {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .project-detail h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--text-pure);
+        }
+
+        /* --- Blog Yazıları --- */
+        .blog-list { max-width: 850px; margin: 0 auto; }
+        
+        .blog-entry {
+            margin-bottom: 80px;
+        }
+
+        .blog-entry h3 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .blog-entry p {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: var(--text-pure);
+            text-decoration: underline;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* --- İletişim --- */
+        #contact { text-align: center; padding-bottom: 150px; }
+        .email-large {
+            font-size: 2.5rem;
+            color: var(--text-pure);
+            text-decoration: none;
+            border-bottom: 2px solid var(--text-pure);
+            transition: opacity 0.3s;
+        }
+        .email-large:hover { opacity: 0.6; }
+
+        footer {
+            padding: 80px 10%;
+            text-align: center;
+            background: #050505;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 900px) {
+            header h1 { font-size: 3rem; }
+            section { padding: 80px 5%; }
+            .project-item { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home" class="logo">Yusuf Cengil</a>
+        <ul>
+            <li><a href="#about">Vizyon</a></li>
+            <li><a href="#projects">Projeler</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>Yusuf Cengil</h1>
+        <p>"Kodun mimarisi, düşüncenin en saf formudur."</p>
+    </header>
+
+    <section id="about">
+        <h2>Vizyon & Hedefler</h2>
+        <div class="content-block">
+            <p>
+                Bir <span class="highlight">Yazılım Mühendisliği</span> öğrencisi olarak, teknolojiyi sadece bir araç değil, karmaşık toplumsal ve teknik problemleri çözmek için bir dil olarak görüyorum. Geliştirme sürecinde temel felsefem; <span class="highlight">sürdürülebilirlik</span>, <span class="highlight">ölçeklenebilirlik</span> ve <span class="highlight">temiz kod</span> prensipleridir.
+            </p>
+            <p>
+                Akademik hayatım boyunca veri yapılarından algoritma analizine, işletim sistemleri mantığından yapay zeka entegrasyonuna kadar geniş bir yelpazede derinlemesine incelemeler yapıyorum. Amacım, donanım ve yazılım arasındaki o ince çizgide, en yüksek performansı sağlayan optimize sistemler inşa etmektir.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Teknik Çalışmalar</h2>
+        <div class="project-grid">
+            
+            <div class="project-item">
+                <div class="project-meta-info">
+                    Sistem Tasarımı <br> 2026
+                </div>
+                <div class="project-detail">
+                    <h3>Dağıtık Veri İşleme Motoru</h3>
+                    <p>Yüksek trafikli sistemlerde verinin gecikmesiz işlenmesini sağlayan, mikroservis mimarisiyle kurgulanmış bir backend projesi. Bu çalışmada Kafka ve Go kullanılarak veri hattı optimizasyonu üzerine odaklanılmıştır.</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-meta-info">
+                    Yapay Zeka <br> 2025
+                </div>
+                <div class="project-detail">
+                    <h3>Örüntü Tanıma Algoritmaları</h3>
+                    <p>Düşük kaynak tüketen cihazlar için optimize edilmiş görüntü işleme kütüphanesi. C++ ve OpenCV kullanarak, gömülü sistemlerde gerçek zamanlı nesne tespiti üzerine bir çalışma.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>Blogdan Yazılar</h2>
+        <div class="blog-list">
+            
+            <article class="blog-entry">
+                <h3>Yazılımda Soyutlama Sanatı</h3>
+                <p>Karmaşık sistemleri yönetilebilir parçalara ayırmak, sadece bir mühendislik becerisi değil, bir zihin yapısıdır. Bu yazıda, tasarım kalıplarının (Design Patterns) modern yazılım mimarisindeki vazgeçilmez yerini ve kodun ömrünü nasıl uzattığını inceliyoruz.</p>
+                <a href="#" class="read-more">Devamını Oku</a>
+            </article>
+
+            <article class="blog-entry">
+                <h3>Algoritmik Verimlilik ve Bellek Yönetimi</h3>
+                <p>Modern diller bize bellek yönetimini unutturuyor mu? C++ ve Rust gibi dillerin neden hala kritik sistemlerin kalbinde yer aldığını, manuel bellek yönetiminin performansa olan doğrudan etkilerini teknik bir perspektifle ele alıyorum.</p>
+                <a href="#" class="read-more">Devamını Oku</a>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>İ
